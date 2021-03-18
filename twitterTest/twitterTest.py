@@ -34,7 +34,7 @@ for j,profil in enumerate(dere_profil[dere_profil['CV'] == ''].iterrows()) :
     # Enedpointへ渡すパラメーター
     name = profil[1].l_name + profil[1].f_name
     # keyword = name + ' OR #' + name + ' -filter:retweets'
-    keyword = name + 'に投票したよ #ボイスアイドルオーディション  -filter:retweets'
+    keyword = name + 'に投票したよ #第2回ボイスアイドルオーディション  -filter:retweets'
     # since - until 出期間指定。過去一週間のみ？
     # https://ja.stackoverflow.com/questions/33254/twitter-api%E3%81%A7%E5%8F%96%E5%BE%97%E3%81%A7%E3%81%8D%E3%82%8B%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88%E3%81%AF%E4%BD%95%E6%97%A5%E5%89%8D%E3%81%BE%E3%81%A7%E3%81%A7%E3%81%99%E3%81%8B
     params = {
@@ -90,7 +90,7 @@ result.to_csv('result' + dt.datetime.now(tz_JST).strftime('%Y%m%d-%H%M%S') + '.c
 
 # Twitter投稿
 # 日付時刻文字列化
-tweetMSG = dt.datetime.now(tz_JST).strftime('%Y/%m/%d %H:%M:%S') + '現在の投票ﾂｲｰﾄ時速(T/h)\n( #ボイスアイドルオーディション )\n'
+tweetMSG = dt.datetime.now(tz_JST).strftime('%Y/%m/%d %H:%M:%S') + '現在の投票ﾂｲｰﾄ時速(T/h)\n( #第2回ボイスアイドルオーディション )\n'
 tweetLen = len(tweetMSG.encode())
 
 for data in result.iterrows():
